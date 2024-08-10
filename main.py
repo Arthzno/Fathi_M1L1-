@@ -6,6 +6,7 @@ meme_dict = {
             "SHEESH": "sedikit ketidaksetujuan",
             "CREEPY": "menakutkan, tidak menyenangkan",
             "AGGRO": "untuk menjadi agresif/marah",
+            "RIZZ": "SIGMA",
             }
 for i in range(len(meme_dict)):
   print(meme_dict[word])
