@@ -26,16 +26,11 @@ async def repeat(ctx, times: int, content='repeating...'):
     for i in range(times):
         await ctx.send(content)
 
+
 @bot.command()
-async def roll(ctx, dice: str):
-    """Rolls a dice in NdN format."""
-    try:
-        rolls, limit = map(int, dice.split('d'))
-    except Exception:
-        await ctx.send('Format has to be in NdN!')
-        return
+async def roll (ctx, num_sides: int = 6):
+    """Rolls a dice with a specified number of sides (default is 6)."""
+    roll_result = random.randint(1, num_sides)
+    await ctx.send(f'You rolled a {roll_result} on a {num_sides}-sided dice!')
 
-    result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
-    await ctx.send(result)
-
-bot.run("token")
+bot.run("MTI2NjY5ODQ4MzcwOTExNjQ1Nw.GB-NZq.XbhRpilMpmglAUHR7zuSdr2ZsSch4FtEaIL0F8")
