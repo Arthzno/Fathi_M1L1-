@@ -1,3 +1,0 @@
-@bot.command()
-async def trashtype(ctx):
-    await ctx.send(f'Organic & Anorganic!')
