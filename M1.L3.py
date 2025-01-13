@@ -85,5 +85,9 @@ async def duck(ctx):
     '''Setelah kita memanggil perintah bebek (duck), program akan memanggil fungsi get_duck_image_url'''
     image_url = get_duck_image_url()
     await ctx.send(image_url)
+    
+@bot.command()
+async def trashtype(ctx):
+    await ctx.send(f'Organic & Anorganic!')
 
 bot.run("token ARTH BOT")
